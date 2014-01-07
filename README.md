@@ -8,6 +8,7 @@ Gives the ability to automate the download and upgrade/installation of puppet on
     }
 
 RemoteURL can be provided but is only the base URL for the version.
+
     class{'windows_puppet':
             $version    => '3.4.1'
             $remoteUrl  => 'http://downloads.puppetlabs.com/windows/'
