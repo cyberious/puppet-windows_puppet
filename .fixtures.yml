@@ -1,0 +1,7 @@
+fixtures:
+  repositories:
+    pget:   "git://github.com/cyberious/puppet-pget"
+    stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib"
+    powershell: "git://github.com/joshcooper/puppetlabs-powershell"
+  symlinks:
+    windows_puppet: "#{source_dir}"
