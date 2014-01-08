@@ -14,7 +14,7 @@ describe 'windows_puppet' do
           'target' => 'C:/software'
                                                  })
       should contain_package('UpgradePuppet').with({
-          'description' => 'Bogus Puppet Name to force installer',
+          'name' => 'Puppet',
           'source'      => 'C:/software/puppet-3.4.1.msi',
           'install_options' => '/qn'
                                                    })

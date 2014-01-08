@@ -9,3 +9,4 @@ project_page 'https://github.com/cyberious/puppet-windows_puppet.git'
 
 ## Add dependencies, if any:
 dependency 'cyberious/pget', '>= 0.1.2'
+dependency 'puppetlabs/stdlib', '>= 4.1.0'

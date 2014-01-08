@@ -29,21 +29,24 @@
 # Copyright 2013 Your name here, unless otherwise noted.
 #
 class windows_puppet(
-  $version    = hiera('windows_puppet','3.4.2'),
+  $version    = hiera('windows_puppet::version','3.4.2'),
   $remoteUrl	= hiera('windows_puppet::remoteUrl','http://downloads.puppetlabs.com/windows/'),
-  $installDir	= hiera('puppet-installDir','C:/software')){
-
+  $installDir	= hiera('windows_puppet::installDir','C:\\software')){
     if $puppetversion != $version {
+      file{$installDir:
+        ensure => directory,
+        recurse => true
+      }
 	  pget{'DownloadPuppet':
 	    source  => "${remoteUrl}puppet-${version}.msi",
         target  => $installDir,
-        notify  => Package['UpgradePuppet'],
+        require => File[$installDir]
       }
       package{'UpgradePuppet':
-        description => 'Bogus Puppet Name to force installer',
-        ensure  => installed,
+        name => 'Puppet',
+        ensure  => "${version}",
         require => Pget['DownloadPuppet'],
-        source  => "${installDir}/puppet-${version}.msi",
+        source  => "${installDir}\\puppet-${version}.msi",
         install_options => ['/qn']
       }
     }
