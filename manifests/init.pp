@@ -31,7 +31,7 @@
 class windows_puppet(
   $version    = hiera('windows_puppet::version','3.4.2'),
   $remoteUrl	= hiera('windows_puppet::remoteUrl','http://downloads.puppetlabs.com/windows/'),
-  $installDir	= hiera('windows_puppet::installDir','C:\\software')){
+  $installDir	= hiera('windows_puppet::installDir','C:\software')){
     if $puppetversion != $version {
       file{$installDir:
         ensure => directory,

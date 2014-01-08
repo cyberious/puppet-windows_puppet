@@ -11,11 +11,11 @@ describe 'windows_puppet' do
     it {
       should contain_pget('DownloadPuppet').with({
           'source' => 'http://downloads.puppetlabs.com/windows/puppet-3.4.1.msi',
-          'target' => 'C:/software'
+          'target' => 'C:\\software'
                                                  })
       should contain_package('UpgradePuppet').with({
           'name' => 'Puppet',
-          'source'      => 'C:/software/puppet-3.4.1.msi',
+          'source'      => 'C:\\software\\puppet-3.4.1.msi',
           'install_options' => '/qn'
                                                    })
     }
