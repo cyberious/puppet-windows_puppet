@@ -1,0 +1,23 @@
+{
+  "author": "tfields",
+  "dependencies": [
+    {
+      "name": "cyberious/pget",
+      "version_requirement": ">= 0.1.3"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=4.1.0"
+    }
+  ],
+  "description": "Update Puppet on windows systems",
+  "license": "Apache License, Version 2.0",
+  "name": "cyberious-windows_puppet",
+  "operatingsystem_support": [],
+  "project_page": "https://github.com/cyberious/puppet-windows_puppet.git",
+  "requirements": [],
+  "source": "https://github.com/cyberious/puppet-windows_puppet.git",
+  "summary": "Download and update puppet",
+  "tags": [],
+  "version": "0.1.0"
+}
